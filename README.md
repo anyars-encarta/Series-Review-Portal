@@ -9,7 +9,7 @@
 
 <!-- MAIN HEADING -->
 
-  <h3><b>Rick and Morty</b></h3>
+  <h3><b>Series Review Portal</b></h3>
 
 </div>
 
@@ -37,9 +37,9 @@
 - [📝 License](#license)
 
 <!-- INTRO -->
-# 📖 To Do List <a name="about-project"></a>
+# 📖 Series Review Portal <a name="about-project"></a>
 
-> This is a To Do List project to showcase the activities I am to perform.
+> This is a Series Review Portal project for Movies and Series reviews.
 
 ## 🛠 Built With <a name="built-with"></a>
 1. HTML
@@ -59,16 +59,13 @@
     <li><a href="https://reactjs.org/">Webpack</a></li>
   </ul>
 </details>
-
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-> - Added To Do Tasks
-> - Added Remove Tasks
-> - Added Mark Tasks as Completed
-> - Unmark Tasks as Completed
-> - Clear all completed tasks
+> - View featured series
+> - Like your favourite series
+> - Comment on your favourite series
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -76,7 +73,7 @@
 
 LIVE DEMO
 
-> Visit the [Live](https://anyars-encarta.github.io/To-do-list/dist/) page of the Project.
+> Visit the [Live](https://anyars-encarta.github.io/Series-Review-Portal/dist/) page of the Project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,7 +88,7 @@ LIVE DEMO
 
 To setup this project, run this command:
 
-```npm run test
+```npm test
 ```
 ### Prerequisites
 
@@ -110,7 +107,7 @@ Install this project with Iroko.
 To run the project, execute the following command:
 
 ### Run tests
-> npm run test
+> npm test
 ### Deployment
 
 You can deploy this project using:
@@ -129,6 +126,11 @@ You can deploy this project using:
 - Twitter: [@anyarsencarta](https://twitter.com/anyarsencarta)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/anyars-yussif-1a179769/)
 
+👤 **Eugene Oduor Omwomo**
+
+- GitHub: [@anyars-encarta](https://github.com/Omwomo)
+- Twitter: [@anyarsencarta](https://twitter.com/username)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/username/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -136,10 +138,10 @@ You can deploy this project using:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **Mark Tasks as Pending**
-- [ ] **Mark Tasks as Blocked**
-- [ ] **Unmark Pending Tasks**
-- [ ] **Unblock Tasks**
+- [ ] **Rate Series**
+- [ ] **Create personal favourite lists**
+- [ ] **Save series to watch later**
+- [ ] **Add series to cart**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -161,7 +163,7 @@ Contributions, issues, and feature requests are welcome!
 <!-- ACKNOWLEDGEMENTS -->
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Special acknowledgement to [@NoerGitKat](https://github.com/NoerGitKat) and [@microverseinc](https://github.com/microverseinc)
+> Special acknowledgement to [@microverseinc](https://github.com/microverseinc)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -174,7 +176,7 @@ Contributions, issues, and feature requests are welcome!
 
 - **What new features should be expected in the next release of the project?**
 
-  - I am currently working on adding **Mark Tasks as Pending**, **Mark Tasks as Blocked**, and **Unmark Pending Tasks**, **Unblock Tasks**.
+  - I am currently working on adding **Rate Series**, **Create personal favourite lists**, and **Save series to watch later**, **Add series to cart**.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

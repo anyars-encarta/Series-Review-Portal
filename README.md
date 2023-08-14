@@ -124,13 +124,13 @@ You can deploy this project using:
 
 - GitHub: [@anyars-encarta](https://github.com/anyars-encarta)
 - Twitter: [@anyarsencarta](https://twitter.com/anyarsencarta)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/anyars-yussif-1a179769/)
+- LinkedIn: [Anyars Yussif](https://www.linkedin.com/in/anyars-yussif-1a179769/)
 
 👤 **Eugene Oduor Omwomo**
 
-- GitHub: [@anyars-encarta](https://github.com/Omwomo)
-- Twitter: [@anyarsencarta](https://twitter.com/username)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/username/)
+- GitHub: [@Omwomo](https://github.com/Omwomo)
+- Twitter: [@Omwomo](https://twitter.com/username)
+- LinkedIn: [Omwomo](https://www.linkedin.com/in/username/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

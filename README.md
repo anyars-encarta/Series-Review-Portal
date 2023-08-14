@@ -4,7 +4,7 @@
 
  <!-- LOGO -->
 
-  <img src="./src/assets/r-and-m-logo.png" alt="logo" width="140"  height="auto" />
+  <img src="./src/assets/hotflix-logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
 <!-- MAIN HEADING -->

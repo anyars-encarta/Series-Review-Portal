@@ -1,6 +1,6 @@
 // fetchLikes.js
 
-async function fetchLikes(appId, itemId) {
+const fetchLikes = async (appId, itemId) => {
   const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/likes`;
   const response = await fetch(url);
   const data = await response.json();
@@ -8,6 +8,6 @@ async function fetchLikes(appId, itemId) {
   // Find the item with the given itemId and get its likes count
   const item = data.find((item) => item.item_id === itemId);
   return item ? item.likes : 0;
-}
+};
 
 export default fetchLikes;

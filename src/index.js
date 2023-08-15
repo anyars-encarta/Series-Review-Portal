@@ -1,25 +1,28 @@
 import './style.css';
 import fetchLatestShows from './modules/fetchData.js';
+import fetchLikes from './modules/fetchLikes.js';
 
-// Creating Show elements to display in the screen.
-async function createShowElement(show) {
+const createShowElement = async (show) => {
+  const likes = await fetchLikes('JPNcHMmt2hzSVQjbTTQW', show.id);
   const showElement = document.createElement('div');
   showElement.className = 'show';
   showElement.innerHTML = `
     <img class="image" src="${show.image.medium}" alt="${show.name}">
     <h3>${show.name}</h3>
     <div class="interaction-icons">
-      <i class="fas fa-heart like-button"></i>
+      <div class="like">
+        <p class="likes-count">${likes}</p>
+        <i class="fas fa-heart like-button"></i>
+      </div>
       <i class="fas fa-comment"></i>
     </div>
-    <p>Likes: <span class="likes-count" data-item-id="${show.id}"></span></p>
   `;
 
   return showElement;
-}
+};
 
 // Displaying shows on the homepage.
-async function displayLatestShows() {
+const displayLatestShows = async () => {
   const latestItemsContainers = document.querySelectorAll('.movie-list');
   const latestShows = await fetchLatestShows();
 
@@ -31,7 +34,7 @@ async function displayLatestShows() {
       container.appendChild(showElement);
     });
   });
-}
+};
 
 // Implementing single page application.
 const latestListItem = document.querySelector('.latest');

@@ -129,3 +129,11 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+
+.like {
+  display: flex;
+}
+
+.likes-count {
+  align-self: center;
+}

@@ -61,3 +61,12 @@ seriesListItem.forEach((item) => {
     latestListItem.forEach((li) => li.classList.remove('active'));
   });
 });
+
+// Call the function to display the latest shows when the page loads
+window.onload = () => {
+  displayLatestShows();
+
+  // Initial state: show the 'latest-items' section, hide the 'series-items' section
+  latest.style.display = 'flex';
+  series.style.display = 'none';
+};

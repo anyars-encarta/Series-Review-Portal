@@ -48,7 +48,7 @@ latestListItem.forEach((item) => {
   item.addEventListener('click', () => {
     latest.style.display = 'flex';
     series.style.display = 'none';
-    latestListItem.forEach((li) => li.classList.add('.active'));
+    latestListItem.forEach((li) => li.classList.add('active'));
     seriesListItem.forEach((li) => li.classList.remove('active'));
   });
 });

@@ -16,6 +16,7 @@ async function createShowElement(show) {
     <p>Likes: <span class="likes-count" data-item-id="${show.id}"></span></p>
   `;
 
+  // Add event Listener to the Comment button
   const commentButton = showElement.querySelector('.comment-button');
   commentButton.addEventListener('click', () => {
     openCommentPopup(show); // Pass the 'show' object to the popup function

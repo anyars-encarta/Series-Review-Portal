@@ -5,6 +5,7 @@ const openCommentPopup = async (show) => {
     currentPopup.remove();
   }
 
+  // Create popup elements
   const popup = document.createElement('div');
   popup.className = 'comment-popup';
   popup.innerHTML = `

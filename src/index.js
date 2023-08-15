@@ -1,5 +1,6 @@
 import './style.css';
 import fetchLatestShows from './modules/fetchData.js';
+import openCommentPopup from './modules/commentPopup.js'; // Import the function from the separate file
 
 // Creating Show elements to display in the screen.
 async function createShowElement(show) {
@@ -10,10 +11,16 @@ async function createShowElement(show) {
     <h3>${show.name}</h3>
     <div class="interaction-icons">
       <i class="fas fa-heart like-button"></i>
-      <i class="fas fa-comment"></i>
+      <i class="fas fa-comment comment-button"></i> <!-- Added class for the comment button -->
     </div>
     <p>Likes: <span class="likes-count" data-item-id="${show.id}"></span></p>
   `;
+
+  // Add event Listener to the Comment button
+  const commentButton = showElement.querySelector('.comment-button');
+  commentButton.addEventListener('click', () => {
+    openCommentPopup(show); // Pass the 'show' object to the popup function
+  });
 
   return showElement;
 }

@@ -21,3 +21,18 @@ async function createShowElement(show) {
 
   return showElement;
 }
+
+// Displaying shows on the homepage.
+async function displayLatestShows() {
+  const latestItemsContainers = document.querySelectorAll('.movie-list');
+  const latestShows = await fetchLatestShows();
+
+  latestItemsContainers.forEach(async (container) => {
+    container.innerHTML = '';
+
+    latestShows.forEach(async (show) => {
+      const showElement = await createShowElement(show);
+      container.appendChild(showElement);
+    });
+  });
+}

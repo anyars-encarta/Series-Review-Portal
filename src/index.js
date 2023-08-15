@@ -36,3 +36,28 @@ async function displayLatestShows() {
     });
   });
 }
+
+// Implementing single page application.
+const latestListItem = document.querySelectorAll('.latest');
+const seriesListItem = document.querySelectorAll('.series');
+
+const latest = document.getElementById('latest-items');
+const series = document.getElementById('series-items');
+
+latestListItem.forEach((item) => {
+  item.addEventListener('click', () => {
+    latest.style.display = 'flex';
+    series.style.display = 'none';
+    latestListItem.forEach((li) => li.classList.add('.active'));
+    seriesListItem.forEach((li) => li.classList.remove('active'));
+  });
+});
+
+seriesListItem.forEach((item) => {
+  item.addEventListener('click', () => {
+    latest.style.display = 'none';
+    series.style.display = 'flex';
+    seriesListItem.forEach((li) => li.classList.add('active'));
+    latestListItem.forEach((li) => li.classList.remove('active'));
+  });
+});

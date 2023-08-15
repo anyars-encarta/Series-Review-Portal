@@ -1,3 +1,49 @@
-h1 {
-  color: blue;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+ }
+
+ .navbar {
+  background-color: blueviolet;
+  box-shadow: 4px 4px 0 rgb(2, 2, 2);
+ }
+
+.navbar, .nav-items {
+  display: flex;
+}
+
+.nav-items {
+  margin-left: auto;
+}
+
+.nav-items li {
+  margin: 2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.logo {
+  width: 5rem;
+  background-image: url(./assets/hotflix-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 1rem;
+  border-radius: 20%;
+  border: 2px solid #fff;
+  -moz-box-shadow: 0 6px 5px #ccc;
+  -webkit-box-shadow: 0 6px 5px #ccc;
+  box-shadow: 0 6px 5px #ccc;
+  -moz-border-radius: 190px;
+  -webkit-border-radius: 190px;
+  border-radius: 190px;
+}
+
+.logo:hover {
+  transform: scale(1.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }

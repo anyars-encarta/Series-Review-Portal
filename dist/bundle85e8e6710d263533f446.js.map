@@ -1,1 +1,0 @@
-{"version":3,"file":"bundle85e8e6710d263533f446.js","mappings":";;;;;AAAAA,OAAO,CAACC,GAAG,CAAC,GAAG,CAAC,C","sources":["webpack://project-with-webpack/./src/index.js"],"sourcesContent":["console.log(123);"],"names":["console","log"],"sourceRoot":""}

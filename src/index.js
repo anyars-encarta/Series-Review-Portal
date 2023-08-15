@@ -14,9 +14,11 @@ async function createShowElement(show) {
   showElement.innerHTML = `
     <img class="image" src="${show.image.medium}" alt="${show.name}">
     <h3>${show.name}</h3>
-    <i class="fas fa fa-light fa-comment fa-shake"></i>
+    <div class="interaction-icons">
+      <i class="fas fa-heart like-button"></i>
+      <i class="fas fa-comment"></i>
+    </div>
     <p>Likes: <span class="likes-count" data-item-id="${show.id}"></span></p>
-    <button class="like-button">like</button>
   `;
 
   return showElement;

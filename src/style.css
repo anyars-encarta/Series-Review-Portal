@@ -116,3 +116,15 @@ footer {
   width: 100%;
   text-align: center;
 }
+
+.fas {
+  color: #fff;
+  cursor: pointer;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.interaction-icons {
+  display: flex;
+  justify-content: space-between;
+}

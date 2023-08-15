@@ -1,11 +1,5 @@
 import './style.css';
-
-// Fetching data from tv maze API.
-async function fetchLatestShows() {
-  const response = await fetch('https://api.tvmaze.com/shows');
-  const data = await response.json();
-  return data;
-}
+import fetchLatestShows from './modules/fetchData.js';
 
 // Creating Show elements to display in the screen.
 async function createShowElement(show) {

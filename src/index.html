@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
 </head>
 <body>
     <nav class="navbar">
@@ -12,12 +13,16 @@
 
         </div>
         <ul class="nav-items">
-            <li id="series-count">Series(0)</li>
-            <li>Latest</li>
-            <li>Featured</li>
+            <li class="series" id="item-count">Series(0)</li>
+            <li class="latest">Latest</li>
+            <li class="">Featured</li>
         </ul>
     </nav>
-
+    <main>
+      <section class="movie-list" id="latest-items"></section>
+      <section class="movie-list" id="series-items">Hello</section>
+      <div id="app-id-display"></div>
+    </main>
     <footer>
         <small>Created by Microverse under CC license</small>
     </footer>

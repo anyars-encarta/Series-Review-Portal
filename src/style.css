@@ -85,6 +85,7 @@ footer {
 
 .active {
   text-decoration: underline;
+  color: red !important;
 }
 
 .movie-list {

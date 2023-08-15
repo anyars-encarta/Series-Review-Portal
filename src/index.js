@@ -40,28 +40,24 @@ async function displayLatestShows() {
 }
 
 // Implementing single page application.
-const latestListItem = document.querySelectorAll('.latest');
-const seriesListItem = document.querySelectorAll('.series');
+const latestListItem = document.querySelector('.latest');
+const seriesListItem = document.querySelector('.series');
 
 const latest = document.getElementById('latest-items');
 const series = document.getElementById('series-items');
 
-latestListItem.forEach((item) => {
-  item.addEventListener('click', () => {
-    latest.style.display = 'flex';
-    series.style.display = 'none';
-    latestListItem.forEach((li) => li.classList.add('active'));
-    seriesListItem.forEach((li) => li.classList.remove('active'));
-  });
+latestListItem.addEventListener('click', () => {
+  latest.style.display = 'flex';
+  series.style.display = 'none';
+  latestListItem.classList.add('active');
+  seriesListItem.classList.remove('active');
 });
 
-seriesListItem.forEach((item) => {
-  item.addEventListener('click', () => {
-    latest.style.display = 'none';
-    series.style.display = 'flex';
-    seriesListItem.forEach((li) => li.classList.add('active'));
-    latestListItem.forEach((li) => li.classList.remove('active'));
-  });
+seriesListItem.addEventListener('click', () => {
+  latest.style.display = 'none';
+  series.style.display = 'flex';
+  seriesListItem.classList.add('active');
+  latestListItem.classList.remove('active');
 });
 
 // Call the function to display the latest shows when the page loads

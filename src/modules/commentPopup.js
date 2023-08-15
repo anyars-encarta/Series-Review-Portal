@@ -15,10 +15,10 @@ const openCommentPopup = async (show) => {
       <img class="image" src="${show.image.medium}" alt="${show.name}">
       <div class="image-side">
         <h3>${show.name}</h3>
-        <span>${show.summary}</span> 
+        <span>${show.summary}</span>
       </div>
     </div>
-  
+    
     <p id="comment-count">Comments (0)</p>
     <div id="comment-display">
       <ul id="comment-items"></ul>
@@ -39,14 +39,6 @@ const openCommentPopup = async (show) => {
 
   document.body.appendChild(popup);
   currentPopup = popup;
-
-  // Close popup when clicking outside the form
-  popup.addEventListener('click', (event) => {
-    if (event.target === popup) {
-      popup.remove();
-      currentPopup = null;
-    }
-  });
 };
 
 export default openCommentPopup;

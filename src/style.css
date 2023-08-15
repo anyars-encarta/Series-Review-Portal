@@ -25,7 +25,8 @@ footer {
   display: flex;
 }
 
-.nav-items {
+.nav-items,
+.close-button {
   margin-left: auto;
 }
 
@@ -92,7 +93,8 @@ footer {
   justify-content: space-around;
 }
 
-.select li {
+.select li,
+.close-button {
   cursor: pointer;
 }
 
@@ -142,32 +144,36 @@ div #comment-display {
 }
 
 .close-button {
-  color: black;
+  color: rgb(14, 13, 13);
+  font-size: 20px;
 }
 
 .comment-popup {
-  top: 2rem;
-  left: 2rem;
-  right: 2rem;
+  top: 10%;
+  right: 7em;
   bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  background-color: #fff;
+  background-color: #FFF;
   border-radius: 2rem;
-  padding: 5% 4% 2rem;
+  padding: 2% 2%;
   z-index: 9999;
   width: 80%;
   height: 80%;
   overflow: auto;
   position: fixed;
-  color: #000;
+  box-shadow: 0.1px 0.1px 3px 5px rgba(34, 2, 2, 0.7);
 }
 
 .comment-popup img {
   width: max-content;
   height: 100%;
+  border: 1px solid #000;
+  border-radius: 5%;
+  background-color: rgb(61, 59, 57);
+  box-shadow: 0.1px 0.1px 3px 5px rgba(34, 2, 2, 0.7);
 }
 
 .detail-view {
@@ -175,11 +181,40 @@ div #comment-display {
   gap: 20px;
 }
 
+.image-side h3 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.image-side span {
+  font-size: 20px;
+  line-height: 35px;
+}
+
+.comment-popup p,
 #comment-count #comment-display {
   margin: 0 auto;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .comment-area {
+  display: flex;
   flex-direction: column;
-  justify-self: center;
+  margin: 0 auto;
+}
+
+#full-name,
+#comment,
+#commit-button {
+  border: 1px solid black;
+  width: 100%;
+  font-size: 15px;
+  margin: 5px;
+}
+
+#commit-button:hover {
+  cursor: pointer;
+  background-color: #000;
+  color: #FFF;
 }

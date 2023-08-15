@@ -1,4 +1,4 @@
-import './style.css';
+// import './style.css';
 import fetchLatestShows from './modules/fetchData.js';
 import openCommentPopup from './modules/commentPopup.js'; // Import the function from the separate file
 

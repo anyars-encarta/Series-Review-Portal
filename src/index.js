@@ -2,6 +2,8 @@ import './style.css';
 import fetchLatestShows from './modules/fetchData.js';
 import fetchLikes from './modules/fetchLikes.js';
 import openCommentPopup from './modules/commentPopup.js'; // Import the function from the separate file
+import addLike from './modules/addLike.js';
+import updateCount from './modules/updateLikeCount.js';
 
 const createShowElement = async (show) => {
   const likes = await fetchLikes('JPNcHMmt2hzSVQjbTTQW', show.id);
@@ -12,10 +14,10 @@ const createShowElement = async (show) => {
     <h3>${show.name}</h3>
     <div class="interaction-icons">
       <div class="like">
-        <p class="likes-count">${likes}</p>
+        <p class="like-display"><span class="likes-count" data-item-id="${show.id}">${likes}</span></p>
         <i class="fas fa-heart like-button"></i>
       </div>
-      <i class="fas fa-comment comment button"></i>
+      <i class="fas fa-comment comment-button"></i>
     </div>
   `;
 
@@ -23,6 +25,13 @@ const createShowElement = async (show) => {
   const commentButton = showElement.querySelector('.comment-button');
   commentButton.addEventListener('click', () => {
     openCommentPopup(show); // Pass the 'show' object to the popup function
+  });
+
+  // Add event listener to the like icon
+  const likeButton = showElement.querySelector('.like-button');
+  likeButton.addEventListener('click', async () => {
+    const updatedLikes = await addLike('JPNcHMmt2hzSVQjbTTQW', show.id);
+    updateCount('likes', show.id, updatedLikes);
   });
 
   return showElement;

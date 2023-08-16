@@ -140,10 +140,13 @@ footer {
 
 .like {
   display: flex;
+  align-self: center !important;
 }
 
-.likes-count {
-  align-self: center;
+.like-display {
+  align-self: center !important;
+}
+
 div #comment-display {
   border: 1px solid red;
 }

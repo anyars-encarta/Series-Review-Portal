@@ -10,15 +10,15 @@ const openCommentPopup = async (show) => {
   popup.className = 'comment-popup';
   popup.innerHTML = `
     <i class="fa-solid fa-square-xmark close-button"></i>
-    
+
     <div class="detail-view">
       <img class="image" src="${show.image.medium}" alt="${show.name}">
       <div class="image-side">
         <h3>${show.name}</h3>
-        <span>${show.summary}</span> 
+        <span>${show.summary}</span>
       </div>
     </div>
-  
+
     <p id="comment-count">Comments (0)</p>
     <div id="comment-display">
       <ul id="comment-items"></ul>

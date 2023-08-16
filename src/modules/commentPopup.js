@@ -1,6 +1,6 @@
-// import fetchComments from './fetchComments.js';
+import fetchComments from './fetchComments.js';
 import addComment from './addComment.js';
-// import updateCommentCount from './commentCount.js';
+import updateCommentCount from './commentCount.js';
 
 const uniqueID = 'XLs816Sw5Ws6tzau8VMq';
 
@@ -82,23 +82,23 @@ const openCommentPopup = async (show) => {
     }
   });
 
-  // try {
-  //   const comments = await fetchComments(uniqueID, show.id);
+  try {
+    const comments = await fetchComments(uniqueID, show.id);
 
-  //   updateCommentCount(uniqueID, show.id);
+    updateCommentCount(uniqueID, show.id);
 
-  //   const commentList = popup.querySelector('#comment-items');
-  //   commentList.innerHTML = '';
+    const commentList = popup.querySelector('#comment-items');
+    commentList.innerHTML = '';
 
-  //   comments.forEach((comment) => {
-  //     const listItem = document.createElement('li');
+    comments.forEach((comment) => {
+      const listItem = document.createElement('li');
 
-  //     listItem.textContent = `${comment.creation_date} ${comment.username}: ${comment.comment}`;
-  //     commentList.appendChild(listItem);
-  //   });
-  // } catch (error) {
-  //   throw new Error(error);
-  // }
+      listItem.textContent = `${comment.creation_date} ${comment.username}: ${comment.comment}`;
+      commentList.appendChild(listItem);
+    });
+  } catch (error) {
+    throw new Error(error);
+  }
 };
 
 export default openCommentPopup;

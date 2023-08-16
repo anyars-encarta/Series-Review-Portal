@@ -1,5 +1,3 @@
-// import updateCommentCount from './commentCount.js'; // Import the updateCommentCount function
-
 const addComment = async (appId, itemId, username, comment) => {
   const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/comments`;
   const requestBody = {
@@ -18,7 +16,6 @@ const addComment = async (appId, itemId, username, comment) => {
 
   if (response.status === 201) {
     // Comment added successfully
-    // updateCommentCount(appId, itemId); // Update the comment count immediately
   } else {
     // Handle error here
   }

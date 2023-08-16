@@ -155,10 +155,7 @@ footer {
 
 div #comment-display {
   border: 1px solid red;
-}
-
-div #comment-display {
-  width: 100%;
+  width: 50%;
   margin-left: 35%;
 }
 

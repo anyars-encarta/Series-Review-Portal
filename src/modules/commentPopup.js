@@ -1,11 +1,20 @@
+// import fetchComments from './fetchComments.js';
+import addComment from './addComment.js';
+// import updateCommentCount from './commentCount.js';
+
+const uniqueID = 'XLs816Sw5Ws6tzau8VMq';
+
 let currentPopup = null;
 
 const openCommentPopup = async (show) => {
   if (currentPopup) {
-    currentPopup.remove();
+    return;
   }
 
-  // Create popup elements
+  const overlay = document.createElement('div');
+  overlay.className = 'overlay';
+  document.body.appendChild(overlay);
+
   const popup = document.createElement('div');
   popup.className = 'comment-popup';
   popup.innerHTML = `
@@ -34,19 +43,61 @@ const openCommentPopup = async (show) => {
   const closeButton = popup.querySelector('.close-button');
   closeButton.addEventListener('click', () => {
     popup.remove();
+    overlay.remove();
     currentPopup = null;
   });
 
   document.body.appendChild(popup);
   currentPopup = popup;
 
-  // Close popup when clicking outside the form
-  popup.addEventListener('click', (event) => {
-    if (event.target === popup) {
-      popup.remove();
-      currentPopup = null;
+  const form = popup.querySelector('.comment-area');
+  const commentList = popup.querySelector('#comment-items');
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const nameInput = form.querySelector('#full-name');
+    const commentInput = form.querySelector('#comment');
+
+    const name = nameInput.value;
+    const comment = commentInput.value;
+
+    if (name && comment) {
+      const listItem = document.createElement('li');
+
+      const commentDate = new Date().toLocaleDateString();
+
+      listItem.textContent = `${commentDate} ${name}: ${comment}`;
+      commentList.appendChild(listItem);
+
+      nameInput.value = '';
+      commentInput.value = '';
+
+      try {
+        await addComment(uniqueID, show.id, name, comment);
+      } catch (error) {
+        throw new Error(error);
+      }
     }
   });
+
+  // try {
+  //   const comments = await fetchComments(uniqueID, show.id);
+
+  //   updateCommentCount(uniqueID, show.id);
+
+  //   const commentList = popup.querySelector('#comment-items');
+  //   commentList.innerHTML = '';
+
+  //   comments.forEach((comment) => {
+  //     const listItem = document.createElement('li');
+
+  //     listItem.textContent = `${comment.creation_date} ${comment.username}: ${comment.comment}`;
+  //     commentList.appendChild(listItem);
+  //   });
+  // } catch (error) {
+  //   throw new Error(error);
+  // }
 };
 
 export default openCommentPopup;

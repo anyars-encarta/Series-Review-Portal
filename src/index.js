@@ -1,4 +1,4 @@
-import './style.css';
+// import './style.css';
 import fetchLatestShows from './modules/fetchData.js';
 import fetchLikes from './modules/fetchLikes.js';
 import openCommentPopup from './modules/commentPopup.js'; // Import the function from the separate file
@@ -15,7 +15,7 @@ const createShowElement = async (show) => {
         <p class="likes-count">${likes}</p>
         <i class="fas fa-heart like-button"></i>
       </div>
-      <i class="fas fa-comment comment button"></i>
+      <i class="fas fa-comment comment-button"></i>
     </div>
   `;
 

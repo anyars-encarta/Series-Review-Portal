@@ -4,7 +4,6 @@ import fetchLikes from './modules/fetchLikes.js';
 import openCommentPopup from './modules/commentPopup.js';
 import addLike from './modules/addLike.js';
 import updateCount from './modules/updateLikeCount.js';
-import fetchComments from './modules/fetchComments.js';
 import { countItems, updateItemCount } from './modules/seriesCount.js';
 // import fetchComments from './modules/fetchComments.js';
 
@@ -22,7 +21,7 @@ const createShowElement = async (show) => {
       </div>
       
       <div class="comment">
-        <p class="comment-display"><span class="comment-count" data-item-id="${show.id}">${likes}</span></p>
+        <p class="comment-display"><span class="comment-count" data-item-id="${show.id}">0</span></p>
         <i class="fas fa-comment comment-button"></i>
       </div>
     </div>

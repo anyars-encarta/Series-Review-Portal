@@ -5,7 +5,6 @@ import fetchLatestShows from './modules/fetchData.js';
 import openCommentPopup from './modules/displayComments.js';
 import fetchLikes from './modules/fetchLikes.js';
 
-
 const createShowElement = async (show) => {
   const likes = await fetchLikes('JPNcHMmt2hzSVQjbTTQW', show.id);
   const showElement = document.createElement('div');

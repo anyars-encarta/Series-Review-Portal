@@ -51,6 +51,10 @@ const displayLatestShows = async () => {
       container.appendChild(showElement);
     });
   });
+
+  // Update and display the item count on the screen
+  const itemCount = countItems(latestShows);
+  updateItemCount(itemCount);
 };
 
 // Implementing single page application.

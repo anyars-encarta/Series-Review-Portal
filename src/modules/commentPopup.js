@@ -2,8 +2,13 @@ let currentPopup = null;
 
 const openCommentPopup = async (show) => {
   if (currentPopup) {
-    currentPopup.remove();
+    return; // Do not open another popup if one is already open
   }
+
+  // Create modal overlay
+  const overlay = document.createElement('div');
+  overlay.className = 'overlay';
+  document.body.appendChild(overlay);
 
   // Create popup elements
   const popup = document.createElement('div');
@@ -34,6 +39,7 @@ const openCommentPopup = async (show) => {
   const closeButton = popup.querySelector('.close-button');
   closeButton.addEventListener('click', () => {
     popup.remove();
+    overlay.remove();
     currentPopup = null;
   });
 

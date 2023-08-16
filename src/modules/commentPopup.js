@@ -18,7 +18,7 @@ const openCommentPopup = async (show) => {
   const popup = document.createElement('div');
   popup.className = 'comment-popup';
   popup.innerHTML = `
-  
+
     <i class="fa-solid fa-square-xmark close-button"></i>
 
     <div class="detail-view">

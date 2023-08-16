@@ -6,4 +6,3 @@ const fetchLatestShows = async () => {
 };
 
 export default fetchLatestShows;
-

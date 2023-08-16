@@ -14,4 +14,3 @@ const updateCommentCount = async (appId, itemId) => {
 };
 
 export default updateCommentCount;
-

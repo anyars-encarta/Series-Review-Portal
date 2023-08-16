@@ -1,7 +1,7 @@
-import './style.css';
+// import './style.css';
 import fetchLatestShows from './modules/fetchData.js';
 import fetchLikes from './modules/fetchLikes.js';
-import openCommentPopup from './modules/commentPopup.js'; // Import the function from the separate file
+import openCommentPopup from './modules/commentPopup.js';
 import addLike from './modules/addLike.js';
 import updateCount from './modules/updateLikeCount.js';
 

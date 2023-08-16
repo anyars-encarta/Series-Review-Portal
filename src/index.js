@@ -1,4 +1,4 @@
-//import './style.css';
+// import './style.css';
 import fetchLatestShows from './modules/fetchData.js';
 import fetchLikes from './modules/fetchLikes.js';
 import openCommentPopup from './modules/commentPopup.js';
@@ -17,7 +17,11 @@ const createShowElement = async (show) => {
         <p class="like-display"><span class="likes-count" data-item-id="${show.id}">${likes}</span></p>
         <i class="fas fa-heart like-button"></i>
       </div>
-      <i class="fas fa-comment comment-button"></i>
+      
+      <div class="like">
+        <p class="like-display"><span class="likes-count" data-item-id="${show.id}">${likes}</span></p>
+        <i class="fas fa-comment comment-button"></i>
+      </div>
     </div>
   `;
 

@@ -15,7 +15,7 @@ const createShowElement = async (show) => {
         <p class="likes-count">${likes}</p>
         <i class="fas fa-heart like-button"></i>
       </div>
-      <i class="fas fa-comment comment button"></i>
+      <i class="fas fa-comment comment-button"></i>
     </div>
   `;
 

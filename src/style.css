@@ -144,6 +144,8 @@ footer {
 
 .likes-count {
   align-self: center;
+}
+
 div #comment-display {
   border: 1px solid red;
 }

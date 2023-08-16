@@ -29,13 +29,6 @@ const openCommentPopup = async (show) => {
       </div>
     </div>
 
-    <p id="comment-count">Comments (0)</p>
-    <div id="comment-display">
-      <ul id="comment-items"></ul>
-
-    </div>
-  </div>
-
   <p id="comment-count">Comments (0)</p>
   <div id="comment-display">
     <ul id="comment-items"></ul>

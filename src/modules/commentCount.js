@@ -6,7 +6,7 @@ async function updateCommentCount(appId, itemId) {
     const commentCountElement = document.getElementById('comment-count'); // Get the comment count element
 
     if (commentCountElement) {
-      commentCountElement.textContent = `Comments(${comments.length - comments.length})`;
+      commentCountElement.textContent = `Comments(${comments.length})`;
     }
   } catch (error) {
     throw new Error(error);

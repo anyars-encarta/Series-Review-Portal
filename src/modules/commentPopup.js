@@ -85,18 +85,29 @@ const openCommentPopup = async (show) => {
   try {
     const comments = await fetchComments(uniqueID, show.id);
 
-    updateCommentCount(uniqueID, show.id);
+    if (comments.length > 0) {
+      updateCommentCount(uniqueID, show.id);
+    }
 
     const commentList = popup.querySelector('#comment-items');
     commentList.innerHTML = '';
 
-    comments.forEach((comment) => {
-      const listItem = document.createElement('li');
-
-      listItem.textContent = `${comment.creation_date} ${comment.username}: ${comment.comment}`;
-      commentList.appendChild(listItem);
-    });
+    if (comments.length === 0) {
+      const noCommentsMessage = document.createElement('li');
+      noCommentsMessage.textContent = '';
+      commentList.appendChild(noCommentsMessage);
+    } else {
+      comments.forEach((comment) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${comment.creation_date} ${comment.username}: ${comment.comment}`;
+        commentList.appendChild(listItem);
+      });
+    }
   } catch (error) {
+    const errorMessage = document.createElement('li');
+    errorMessage.textContent = '';
+    commentList.appendChild(errorMessage);
+
     throw new Error(error);
   }
 };

@@ -199,7 +199,7 @@ var uniqueID = 'XLs816Sw5Ws6tzau8VMq';
 var currentPopup = null;
 var openCommentPopup = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(show) {
-    var overlay, popup, closeButton, form, commentList, comments, _commentList;
+    var overlay, popup, closeButton, form, commentList, comments, _commentList, noCommentsMessage, errorMessage;
     return _regeneratorRuntime().wrap(function _callee2$(_context2) {
       while (1) switch (_context2.prev = _context2.next) {
         case 0:
@@ -271,21 +271,32 @@ var openCommentPopup = /*#__PURE__*/function () {
           return (0,_fetchComments_js__WEBPACK_IMPORTED_MODULE_0__["default"])(uniqueID, show.id);
         case 18:
           comments = _context2.sent;
-          (0,_commentCount_js__WEBPACK_IMPORTED_MODULE_2__["default"])(uniqueID, show.id);
+          if (comments.length > 0) {
+            (0,_commentCount_js__WEBPACK_IMPORTED_MODULE_2__["default"])(uniqueID, show.id);
+          }
           _commentList = popup.querySelector('#comment-items');
           _commentList.innerHTML = '';
-          comments.forEach(function (comment) {
-            var listItem = document.createElement('li');
-            listItem.textContent = "".concat(comment.creation_date, " ").concat(comment.username, ": ").concat(comment.comment);
-            _commentList.appendChild(listItem);
-          });
-          _context2.next = 28;
+          if (comments.length === 0) {
+            noCommentsMessage = document.createElement('li');
+            noCommentsMessage.textContent = '';
+            _commentList.appendChild(noCommentsMessage);
+          } else {
+            comments.forEach(function (comment) {
+              var listItem = document.createElement('li');
+              listItem.textContent = "".concat(comment.creation_date, " ").concat(comment.username, ": ").concat(comment.comment);
+              _commentList.appendChild(listItem);
+            });
+          }
+          _context2.next = 31;
           break;
         case 25:
           _context2.prev = 25;
           _context2.t0 = _context2["catch"](15);
+          errorMessage = document.createElement('li');
+          errorMessage.textContent = '';
+          commentList.appendChild(errorMessage);
           throw new Error(_context2.t0);
-        case 28:
+        case 31:
         case "end":
           return _context2.stop();
       }
@@ -1577,4 +1588,4 @@ window.onload = function () {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle286270bd615ffd1c6a4e.js.map
+//# sourceMappingURL=bundle5c347b7d74d217bc2164.js.map

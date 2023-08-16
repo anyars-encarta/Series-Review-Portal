@@ -59,7 +59,7 @@ const openCommentPopup = async (show) => {
 
     const nameInput = form.querySelector('#full-name');
     const commentInput = form.querySelector('#comment');
-
+    const commentCountElement = popup.querySelector('#comment-count');
     const name = nameInput.value;
     const comment = commentInput.value;
 
@@ -76,6 +76,10 @@ const openCommentPopup = async (show) => {
 
       try {
         await addComment(uniqueID, show.id, name, comment);
+
+        // Increment the comment count
+        const currentCommentCount = parseInt(commentCountElement.textContent.match(/\d+/)[0], 10);
+        commentCountElement.textContent = `Comments (${currentCommentCount + 1})`;
       } catch (error) {
         throw new Error(error);
       }
@@ -85,29 +89,18 @@ const openCommentPopup = async (show) => {
   try {
     const comments = await fetchComments(uniqueID, show.id);
 
-    if (comments.length > 0) {
-      updateCommentCount(uniqueID, show.id);
-    }
+    updateCommentCount(uniqueID, show.id);
 
     const commentList = popup.querySelector('#comment-items');
     commentList.innerHTML = '';
 
-    if (comments.length === 0) {
-      const noCommentsMessage = document.createElement('li');
-      noCommentsMessage.textContent = '';
-      commentList.appendChild(noCommentsMessage);
-    } else {
-      comments.forEach((comment) => {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${comment.creation_date} ${comment.username}: ${comment.comment}`;
-        commentList.appendChild(listItem);
-      });
-    }
-  } catch (error) {
-    const errorMessage = document.createElement('li');
-    errorMessage.textContent = '';
-    commentList.appendChild(errorMessage);
+    comments.forEach((comment) => {
+      const listItem = document.createElement('li');
 
+      listItem.textContent = `${comment.creation_date} ${comment.username}: ${comment.comment}`;
+      commentList.appendChild(listItem);
+    });
+  } catch (error) {
     throw new Error(error);
   }
 };

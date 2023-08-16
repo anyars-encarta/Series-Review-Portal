@@ -1,5 +1,3 @@
-// addLike.js
-
 import updateCount from './updateLikeCount.js';
 import fetchLikes from './fetchLikes.js';
 

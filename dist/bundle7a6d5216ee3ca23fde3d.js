@@ -227,17 +227,18 @@ var openCommentPopup = /*#__PURE__*/function () {
           commentList = popup.querySelector('#comment-items');
           form.addEventListener('submit', /*#__PURE__*/function () {
             var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(event) {
-              var nameInput, commentInput, name, comment, listItem, commentDate;
+              var nameInput, commentInput, commentCountElement, name, comment, listItem, commentDate, currentCommentCount;
               return _regeneratorRuntime().wrap(function _callee$(_context) {
                 while (1) switch (_context.prev = _context.next) {
                   case 0:
                     event.preventDefault();
                     nameInput = form.querySelector('#full-name');
                     commentInput = form.querySelector('#comment');
+                    commentCountElement = popup.querySelector('#comment-count');
                     name = nameInput.value;
                     comment = commentInput.value;
                     if (!(name && comment)) {
-                      _context.next = 20;
+                      _context.next = 23;
                       break;
                     }
                     listItem = document.createElement('li');
@@ -246,21 +247,24 @@ var openCommentPopup = /*#__PURE__*/function () {
                     commentList.appendChild(listItem);
                     nameInput.value = '';
                     commentInput.value = '';
-                    _context.prev = 12;
-                    _context.next = 15;
+                    _context.prev = 13;
+                    _context.next = 16;
                     return (0,_addComment_js__WEBPACK_IMPORTED_MODULE_1__["default"])(uniqueID, show.id, name, comment);
-                  case 15:
-                    _context.next = 20;
+                  case 16:
+                    // Increment the comment count
+                    currentCommentCount = parseInt(commentCountElement.textContent.match(/\d+/)[0], 10);
+                    commentCountElement.textContent = "Comments (".concat(currentCommentCount + 1, ")");
+                    _context.next = 23;
                     break;
-                  case 17:
-                    _context.prev = 17;
-                    _context.t0 = _context["catch"](12);
-                    throw new Error(_context.t0);
                   case 20:
+                    _context.prev = 20;
+                    _context.t0 = _context["catch"](13);
+                    throw new Error(_context.t0);
+                  case 23:
                   case "end":
                     return _context.stop();
                 }
-              }, _callee, null, [[12, 17]]);
+              }, _callee, null, [[13, 20]]);
             }));
             return function (_x2) {
               return _ref2.apply(this, arguments);
@@ -1577,4 +1581,4 @@ window.onload = function () {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle88ad2ce0fe3b0ae6666f.js.map
+//# sourceMappingURL=bundle7a6d5216ee3ca23fde3d.js.map

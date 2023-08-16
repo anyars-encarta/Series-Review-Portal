@@ -102,6 +102,7 @@ footer {
 
 .active {
   text-decoration: underline;
+  color: red !important;
 }
 
 .movie-list {
@@ -137,6 +138,12 @@ footer {
   justify-content: space-between;
 }
 
+.like {
+  display: flex;
+}
+
+.likes-count {
+  align-self: center;
 div #comment-display {
   border: 1px solid red;
 }

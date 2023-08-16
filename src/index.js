@@ -4,6 +4,7 @@ import fetchLikes from './modules/fetchLikes.js';
 import openCommentPopup from './modules/commentPopup.js'; // Import the function from the separate file
 import addLike from './modules/addLike.js';
 import updateCount from './modules/updateLikeCount.js';
+import { countItems, updateItemCount } from './modules/seriesCount.js';
 
 const createShowElement = async (show) => {
   const likes = await fetchLikes('JPNcHMmt2hzSVQjbTTQW', show.id);
@@ -50,6 +51,10 @@ const displayLatestShows = async () => {
       container.appendChild(showElement);
     });
   });
+
+  // Update and display the item count on the screen
+  const itemCount = countItems(latestShows);
+  updateItemCount(itemCount);
 };
 
 // Implementing single page application.

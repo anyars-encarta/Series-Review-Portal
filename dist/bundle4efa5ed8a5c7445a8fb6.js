@@ -155,7 +155,7 @@ function _updateCommentCount() {
           comments = _context.sent;
           commentCountElement = document.getElementById('comment-count'); // Get the comment count element
           if (commentCountElement) {
-            commentCountElement.textContent = "Comments(".concat(comments.length - comments.length, ")");
+            commentCountElement.textContent = "Comments(".concat(comments.length, ")");
           }
           _context.next = 11;
           break;
@@ -1400,7 +1400,7 @@ var createShowElement = /*#__PURE__*/function () {
           likes = _context2.sent;
           showElement = document.createElement('div');
           showElement.className = 'show';
-          showElement.innerHTML = "\n    <img class=\"image\" src=\"".concat(show.image.medium, "\" alt=\"").concat(show.name, "\">\n    <h3>").concat(show.name, "</h3>\n    <div class=\"interaction-icons\">\n      <div class=\"like\">\n        <p class=\"like-display\"><span class=\"likes-count\" data-item-id=\"").concat(show.id, "\">").concat(likes, "</span></p>\n        <i class=\"fas fa-heart like-button\"></i>\n      </div>\n      <i class=\"fas fa-comment comment-button\"></i>\n    </div>\n  ");
+          showElement.innerHTML = "\n    <img class=\"image\" src=\"".concat(show.image.medium, "\" alt=\"").concat(show.name, "\">\n    <h3>").concat(show.name, "</h3>\n    <div class=\"interaction-icons\">\n      <div class=\"like\">\n        <p class=\"like-display\"><span class=\"likes-count\" data-item-id=\"").concat(show.id, "\">").concat(likes, "</span></p>\n        <i class=\"fas fa-heart like-button\"></i>\n      </div>\n      \n      <div class=\"like\">\n        <p class=\"like-display\"><span class=\"likes-count\" data-item-id=\"").concat(show.id, "\">").concat(likes, "</span></p>\n        <i class=\"fas fa-comment comment-button\"></i>\n      </div>\n    </div>\n  ");
 
           // Add event Listener to the Comment button
           commentButton = showElement.querySelector('.comment-button');
@@ -1528,4 +1528,4 @@ window.onload = function () {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle5b07db75ba7ad5545229.js.map
+//# sourceMappingURL=bundle4efa5ed8a5c7445a8fb6.js.map

@@ -4,7 +4,7 @@ import fetchLikes from './modules/fetchLikes.js';
 import openCommentPopup from './modules/commentPopup.js';
 import addLike from './modules/addLike.js';
 import updateCount from './modules/updateLikeCount.js';
-import fetchComments from './modules/fetchComments.js';
+// import fetchComments from './modules/fetchComments.js';
 
 const createShowElement = async (show) => {
   const likes = await fetchLikes('JPNcHMmt2hzSVQjbTTQW', show.id);

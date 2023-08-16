@@ -5,7 +5,7 @@ import openCommentPopup from './modules/commentPopup.js';
 import addLike from './modules/addLike.js';
 import updateCount from './modules/updateLikeCount.js';
 import { countItems, updateItemCount } from './modules/seriesCount.js';
-// import fetchComments from './modules/fetchComments.js';
+import fetchComments from './modules/fetchComments.js';
 
 const createShowElement = async (show) => {
   const likes = await fetchLikes('JPNcHMmt2hzSVQjbTTQW', show.id);
@@ -58,10 +58,10 @@ const displayLatestShows = async () => {
     latestShows.forEach(async (show) => {
       const showElement = await createShowElement(show);
 
-      // // Fetch comments for the show to update comment count
-      // const comments = await fetchComments('XLs816Sw5Ws6tzau8VMq', show.id);
-      // const commentCountSpan = showElement.querySelector('.comment-count');
-      // commentCountSpan.textContent = comments.length === 0 ? 0 : comments.length;
+      // Fetch comments for the show to update comment count
+      const comments = await fetchComments('XLs816Sw5Ws6tzau8VMq', show.id);
+      const commentCountSpan = showElement.querySelector('.comment-count');
+      commentCountSpan.textContent = comments.length === 0 ? 0 : comments.length;
 
       container.appendChild(showElement);
     });

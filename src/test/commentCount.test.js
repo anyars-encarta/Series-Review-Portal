@@ -1,4 +1,4 @@
-import updateCommentCount from './commentCount.js';
+import updateCommentCount from '../modules/commentCount.js';
 import fetchComments from '../modules/fetchComments.js';
 
 // Mock the fetchComments function

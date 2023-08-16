@@ -1,6 +1,8 @@
 // import './style.css';
 import fetchLatestShows from './modules/fetchData.js';
-import openCommentPopup from './modules/commentPopup.js'; // Import the function from the separate file
+// Import the function from the separate file
+// import openCommentPopup from './modules/commentPopup.js';
+import openCommentPopup from './modules/displayComments.js';
 
 // Creating Show elements to display in the screen.
 async function createShowElement(show) {

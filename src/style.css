@@ -140,7 +140,8 @@ footer {
 }
 
 div #comment-display {
-  border: 1px solid red;
+  width: 100%;
+  margin-left: 35%;
 }
 
 .close-button {
@@ -156,7 +157,7 @@ div #comment-display {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 2rem;
   padding: 2% 2%;
   z-index: 9999;
@@ -192,7 +193,7 @@ div #comment-display {
 }
 
 .comment-popup p,
-#comment-count #comment-display {
+#comment-count {
   margin: 0 auto;
   font-size: 20px;
   margin-bottom: 20px;
@@ -216,7 +217,7 @@ div #comment-display {
 #commit-button:hover {
   cursor: pointer;
   background-color: #000;
-  color: #FFF;
+  color: #fff;
 }
 
 .overlay {
@@ -228,4 +229,4 @@ div #comment-display {
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
   z-index: 9999; /* Ensure it's above other elements */
   transition: 200ms ease-in-out;
-}  
+}

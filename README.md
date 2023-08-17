@@ -74,6 +74,7 @@
 LIVE DEMO
 
 > Visit the [Live](https://anyars-encarta.github.io/Series-Review-Portal/dist/) page of the Project.
+> Click this [link](https://drive.google.com/file/d/1DxSXsJfWHYL5gSP5Ph1Yg1qoA2o2eX9v/view?usp=sharing) to watch a short on the features of the project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

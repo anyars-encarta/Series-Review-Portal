@@ -143,6 +143,7 @@ footer {
 .like {
   display: flex;
   align-self: center !important;
+  margin-left: 10px;
 }
 
 .like-display {
@@ -251,6 +252,7 @@ div #comment-display {
   align-items: center;
 }
 
-.comment-count {
+.comment-count,
+.likes-count {
   color: #fff;
 }

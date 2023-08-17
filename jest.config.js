@@ -13,3 +13,7 @@ module.exports = {
   collectCoverageFrom: ['src/**/*.js'],
   coverageReporters: ['html', 'text'],
 };
+  // setupFilesAfterEnv: ['<rootDir>/src/test/setup.js'],
+  transform: {
+    '^.+\\.js$': 'babel-jest',
+

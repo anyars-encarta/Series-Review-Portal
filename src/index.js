@@ -21,7 +21,7 @@ const createShowElement = async (show) => {
         <p class="like-display"><span class="likes-count" data-item-id="${show.id}">${likes}</span></p>
         <i class="fas fa-heart like-button"></i>
       </div>
-      
+
       <div class="comment">
         <p class="comment-display"><span class="comment-count" data-item-id="${show.id}">0</span></p>
         <i class="fas fa-comment comment-button"></i>

@@ -59,7 +59,7 @@ const openCommentPopup = async (show) => {
 
     const nameInput = form.querySelector('#full-name');
     const commentInput = form.querySelector('#comment');
-
+    const commentCountElement = popup.querySelector('#comment-count');
     const name = nameInput.value;
     const comment = commentInput.value;
 
@@ -76,6 +76,10 @@ const openCommentPopup = async (show) => {
 
       try {
         await addComment(uniqueID, show.id, name, comment);
+
+        // Increment the comment count
+        const currentCommentCount = parseInt(commentCountElement.textContent.match(/\d+/)[0], 10);
+        commentCountElement.textContent = `Comments (${currentCommentCount + 1})`;
       } catch (error) {
         throw new Error(error);
       }

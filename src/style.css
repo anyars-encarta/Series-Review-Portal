@@ -204,7 +204,7 @@ div #comment-display {
 
 .image-side span {
   font-size: 20px;
-  line-height: 35px;
+  line-height: 20px;
 }
 
 .comment-popup p,
@@ -244,4 +244,13 @@ div #comment-display {
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
   z-index: 9999; /* Ensure it's above other elements */
   transition: 200ms ease-in-out;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+}
+
+.comment-count {
+  color: #fff;
 }

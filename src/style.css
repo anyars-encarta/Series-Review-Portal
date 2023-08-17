@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+  box-shadow: 4px 4px 0 rgba(31, 30, 30, 0.274);
+}
+
+.navbar,
+footer {
+  background-color: blueviolet;
+}
+
+.navbar,
+.nav-items {
+  display: flex;
+}
+
+.nav-items,
+.close-button {
+  margin-left: auto;
+}
+
+.nav-items li {
+  margin: 2rem;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+  background-image: url(./assets/hotflix-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 1rem;
+  border: 2px solid #fff;
+  -moz-box-shadow: 0 6px 5px #ccc;
+  -webkit-box-shadow: 0 6px 5px #ccc;
+  box-shadow: 0 6px 5px #ccc;
+  -moz-border-radius: 190px;
+  -webkit-border-radius: 190px;
+  border-radius: 50%;
+}
+
+.show {
+  width: 13rem;
+  border: 1px solid #000;
+  border-radius: 5%;
+  margin: 1rem;
+  background-color: rgb(61, 59, 57);
+  box-shadow: 0.1px 0.1px 3px 5px rgba(34, 2, 2, 0.7);
+}
+
+.logo:hover,
+.show:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: scale(1.5);
+}
+
+.show:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  padding: 1rem;
+  color: #fff;
+}
+
+.select {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.select li,
+.close-button {
+  cursor: pointer;
+}
+
+.select li:active {
+  text-decoration: underline;
+}
+
+.active {
+  text-decoration: underline;
+  color: red !important;
+}
+
+.movie-list {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+#latest-items {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.show img {
+  width: 100%;
+  border-radius: 5%;
+}
+
+.show h3 {
+  width: 100%;
+  text-align: center;
+}
+
+.fas {
+  color: #fff;
+  cursor: pointer;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.interaction-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.like {
+  display: flex;
+  align-self: center !important;
+  margin-left: 10px;
+}
+
+.like-display {
+  align-self: center !important;
+}
+
+.likes-count {
+  align-self: center;
+}
+
+div #comment-display {
+  border: 1px solid red;
+  width: 50%;
+  margin-left: 35%;
+}
+
+.close-button {
+  color: rgb(14, 13, 13);
+  font-size: 20px;
+}
+
+.comment-popup {
+  top: 10%;
+  right: 7em;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 2% 2%;
+  z-index: 9999;
+  width: 80%;
+  height: 80%;
+  overflow: auto;
+  position: fixed;
+  box-shadow: 0.1px 0.1px 3px 5px rgba(34, 2, 2, 0.7);
+}
+
+.comment-popup img {
+  width: max-content;
+  height: 100%;
+  border: 1px solid #000;
+  border-radius: 5%;
+  background-color: rgb(61, 59, 57);
+  box-shadow: 0.1px 0.1px 3px 5px rgba(34, 2, 2, 0.7);
+}
+
+.detail-view {
+  display: flex;
+  gap: 20px;
+}
+
+.image-side h3 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.image-side span {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.comment-popup p,
+#comment-count {
+  margin: 0 auto;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.comment-area {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+#full-name,
+#comment,
+#commit-button {
+  border: 1px solid black;
+  width: 100%;
+  font-size: 15px;
+  margin: 5px;
+}
+
+#commit-button:hover {
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 9999; /* Ensure it's above other elements */
+  transition: 200ms ease-in-out;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+}
+
+.comment-count,
+.likes-count {
+  color: #fff;
+}

@@ -129,8 +129,8 @@ You can deploy this project using:
 👤 **Eugene Oduor Omwomo**
 
 - GitHub: [@Omwomo](https://github.com/Omwomo)
-- Twitter: [@Omwomo](https://twitter.com/username)
-- LinkedIn: [Omwomo](https://www.linkedin.com/in/username/)
+- Twitter: [@eugeneoduor9](https://twitter.com/eugeneoduor9)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/Omwomo)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

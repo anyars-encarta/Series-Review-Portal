@@ -9,7 +9,7 @@
 
 <!-- MAIN HEADING -->
 
-  <h3><b>Series Review Portal</b></h3>
+  <h3><b>Hotflix Series Review Portal</b></h3>
 
 </div>
 
@@ -37,7 +37,7 @@
 - [📝 License](#license)
 
 <!-- INTRO -->
-# 📖 Series Review Portal <a name="about-project"></a>
+# 📖 Hotflix Series Review Portal <a name="about-project"></a>
 
 > This is a Series Review Portal project for Movies and Series reviews.
 

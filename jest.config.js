@@ -3,8 +3,13 @@ module.exports = {
     '^.+\\.jsx?$': 'babel-jest',
     '^.+\\.mjs$': 'babel-jest',
   },
-  moduleNameMapper: {
-    // Add any module name mappings you need
+  testEnvironment: 'jest-environment-jsdom',
+  testEnvironmentOptions: {
+    resources: 'usable',
   },
-  testEnvironment: 'jest-environment-jsdom', // Use jest-environment-jsdom as the test environment
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
+  collectCoverageFrom: ['src/**/*.js'],
+  coverageReporters: ['html', 'text'],
 };

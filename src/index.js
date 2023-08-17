@@ -7,8 +7,10 @@ import updateCount from './modules/updateLikeCount.js';
 import { countItems, updateItemCount } from './modules/seriesCount.js';
 import fetchComments from './modules/fetchComments.js';
 
+const uniqueID = 'JPNcHMmt2hzSVQjbTTQW';
+
 const createShowElement = async (show) => {
-  const likes = await fetchLikes('JPNcHMmt2hzSVQjbTTQW', show.id);
+  const likes = await fetchLikes(uniqueID, show.id);
   const showElement = document.createElement('div');
   showElement.className = 'show';
   showElement.innerHTML = `
@@ -40,7 +42,7 @@ const createShowElement = async (show) => {
   // Add event listener to the like icon
   const likeButton = showElement.querySelector('.like-button');
   likeButton.addEventListener('click', async () => {
-    const updatedLikes = await addLike('JPNcHMmt2hzSVQjbTTQW', show.id);
+    const updatedLikes = await addLike(uniqueID, show.id);
     updateCount('likes', show.id, updatedLikes);
   });
 
@@ -62,6 +64,11 @@ const displayLatestShows = async () => {
       const comments = await fetchComments('XLs816Sw5Ws6tzau8VMq', show.id);
       const commentCountSpan = showElement.querySelector('.comment-count');
       commentCountSpan.textContent = comments.length === 0 ? 0 : comments.length;
+
+      // Set comment count to zero for shows with zero comments
+      if (comments.length === 0) {
+        commentCountSpan.textContent = 0;
+      }
 
       container.appendChild(showElement);
     });

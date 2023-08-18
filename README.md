@@ -132,7 +132,7 @@ You can deploy this project using:
 
 - GitHub: [@Omwomo](https://github.com/Omwomo)
 - Twitter: [@eugeneoduor9](https://twitter.com/eugeneoduor9)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/Omwomo)
+- LinkedIn: [Eugene Oduor](https://linkedin.com/in/Omwomo)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

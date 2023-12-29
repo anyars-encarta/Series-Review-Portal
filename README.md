@@ -39,7 +39,7 @@
 <!-- INTRO -->
 # 📖 Hotflix Series Review Portal <a name="about-project"></a>
 
-> This is a Series Review Portal project for Movies and Series reviews.
+> Hotflix Series Review Portal is an app developed where users could pick their favourite movies, like and add comments to them. This app makes use of two APIs; The movies are fetched from api.tvmaze.com and the added likes and comments are saved to https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps involvement API. On app launch, the movies and their respective likes and comments are fetched from both API respectively.
 
 ## 🛠 Built With <a name="built-with"></a>
 1. HTML
